@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { ToastContainer } from 'react-toastify';
 import { onboardingService } from '@/services/api/onboardingService';
 import Layout from '@/Layout.jsx';
@@ -6,8 +7,30 @@ import { routes, routeArray } from '@/config/routes.js';
 import NotFoundPage from '@/components/pages/NotFoundPage.jsx';
 import OnboardingWizard from '@/components/pages/OnboardingWizard.jsx';
 import './index.css';
+
 function App() {
-  const isOnboardingCompleted = onboardingService.isOnboardingCompleted();
+  const [isOnboardingCompleted, setIsOnboardingCompleted] = useState(
+    onboardingService.isOnboardingCompleted()
+  );
+
+  // Listen for onboarding completion changes
+  useEffect(() => {
+    const checkOnboardingStatus = () => {
+      const completed = onboardingService.isOnboardingCompleted();
+      setIsOnboardingCompleted(completed);
+    };
+
+    // Listen for storage changes (in case onboarding completion is stored in localStorage)
+    window.addEventListener('storage', checkOnboardingStatus);
+    
+    // Listen for custom onboarding completion events
+    window.addEventListener('onboardingCompleted', checkOnboardingStatus);
+
+    return () => {
+      window.removeEventListener('storage', checkOnboardingStatus);
+      window.removeEventListener('onboardingCompleted', checkOnboardingStatus);
+    };
+  }, []);
 
   return (
     <BrowserRouter>
