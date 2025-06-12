@@ -4,31 +4,44 @@ import { format } from 'date-fns';
 import HeatmapCell from '@/components/atoms/HeatmapCell';
 
 const ActivityHeatmapCalendar = ({ heatmapData, cellClassName = '', showDaysLabel = true }) => {
+  if (!heatmapData || !Array.isArray(heatmapData)) {
+    return null;
+  }
+
   return (
-    &lt;&gt;
+    <>
       {showDaysLabel && (
-        &lt;div className="grid grid-cols-7 text-xs text-surface-500 dark:text-surface-400 mb-2"&gt;
-          &lt;span className="text-center"&gt;Sun&lt;/span&gt;
-          &lt;span className="text-center"&gt;Mon&lt;/span&gt;
-          &lt;span className="text-center"&gt;Tue&lt;/span&gt;
-          &lt;span className="text-center"&gt;Wed&lt;/span&gt;
-          &lt;span className="text-center"&gt;Thu&lt;/span&gt;
-          &lt;span className="text-center"&gt;Fri&lt;/span&gt;
-          &lt;span className="text-center"&gt;Sat&lt;/span&gt;
-        &lt;/div&gt;
+        <div className="grid grid-cols-7 text-xs text-surface-500 dark:text-surface-400 mb-2">
+          <span className="text-center">Sun</span>
+          <span className="text-center">Mon</span>
+          <span className="text-center">Tue</span>
+          <span className="text-center">Wed</span>
+          <span className="text-center">Thu</span>
+          <span className="text-center">Fri</span>
+          <span className="text-center">Sat</span>
+        </div>
       )}
-      &lt;div className="grid grid-cols-7 gap-1"&gt;
-        {heatmapData.map((day, index) => (
-          &lt;HeatmapCell
-            key={day.date}
-            intensity={day.intensity || (day.completed ? 1 : 0)}
-            title={`${format(new Date(day.date), 'MMM d')} - ${day.completed ? 'Completed' : 'Not completed'}`}
-            className={cellClassName}
-            index={index}
-          />
-        ))}
-      &lt;/div&gt;
-    &lt;/&gt;
+      <div className="grid grid-cols-7 gap-1">
+        {heatmapData.map((day, index) => {
+          if (!day || !day.date) {
+            return null;
+          }
+
+          const safeDate = new Date(day.date);
+          const isValidDate = !isNaN(safeDate.getTime());
+          
+          return (
+            <HeatmapCell
+              key={day.date}
+              intensity={day.intensity || (day.completed ? 1 : 0)}
+              title={isValidDate ? `${format(safeDate, 'MMM d')} - ${day.completed ? 'Completed' : 'Not completed'}` : 'Invalid date'}
+              className={cellClassName}
+              index={index}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 };
 
