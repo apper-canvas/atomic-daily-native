@@ -1,25 +1,43 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import { onboardingService } from '@/services/api/onboardingService';
 import Layout from '@/Layout.jsx';
 import { routes, routeArray } from '@/config/routes.js';
 import NotFoundPage from '@/components/pages/NotFoundPage.jsx';
+import OnboardingWizard from '@/components/pages/OnboardingWizard.jsx';
 import './index.css';
-
 function App() {
+  const isOnboardingCompleted = onboardingService.isOnboardingCompleted();
+
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-white dark:bg-surface-900 transition-colors duration-200">
         <Routes>
+          {/* Onboarding route - accessible regardless of completion status */}
+          <Route path="/onboarding" element={<OnboardingWizard />} />
+          
+          {/* Main app routes */}
           <Route path="/" element={<Layout />}>
-            <Route index element={<Navigate to="/today" replace />} />
+            <Route 
+              index 
+              element={
+                isOnboardingCompleted 
+                  ? <Navigate to="/today" replace /> 
+                  : <Navigate to="/onboarding" replace />
+              } 
+            />
             {routeArray.map(route => (
               <Route
                 key={route.id}
                 path={route.path}
-                element={<route.component />}
+                element={
+                  isOnboardingCompleted 
+                    ? <route.component />
+                    : <Navigate to="/onboarding" replace />
+                }
               />
             ))}
-<Route path="*" element={<NotFoundPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
         

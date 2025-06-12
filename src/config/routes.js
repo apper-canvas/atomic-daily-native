@@ -9,28 +9,35 @@ export const routes = {
     label: 'Today',
     path: '/today',
     icon: 'Calendar',
-component: HomePage
+    component: HomePage
   },
   habits: {
     id: 'habits',
     label: 'Habits',
     path: '/habits',
     icon: 'Target',
-component: HabitsPage
+    component: HabitsPage
   },
   progress: {
     id: 'progress',
     label: 'Progress',
     path: '/progress',
     icon: 'TrendingUp',
-component: ProgressPage
+    component: ProgressPage
   },
   identity: {
     id: 'identity',
     label: 'Identity',
     path: '/identity',
     icon: 'User',
-component: IdentityPage
+    component: IdentityPage
+  },
+  onboarding: {
+    id: 'onboarding',
+    label: 'Onboarding',
+    path: '/onboarding',
+    icon: 'User',
+    component: () => import('@/components/pages/OnboardingWizard.jsx')
   }
 };
 
