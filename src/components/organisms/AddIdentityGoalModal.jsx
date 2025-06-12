@@ -7,12 +7,12 @@ import Button from '@/components/atoms/Button';
 import FormField from '@/components/molecules/FormField';
 
 const AddIdentityGoalModal = ({ isOpen, onClose, newGoal, setNewGoal, onCreateGoal, identityExamples, onUseExample }) => {
-  if (!isOpen) return null;
+if (!isOpen) return null;
 
   return (
     <AnimatePresence>
       {isOpen && (
-        &lt;&gt;
+        <>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -46,7 +46,7 @@ const AddIdentityGoalModal = ({ isOpen, onClose, newGoal, setNewGoal, onCreateGo
                   </Text>
                 </FormField>
                 
-                &lt;div&gt;
+                <div>
                   <Text as="label" className="block text-sm font-medium text-surface-700 dark:text-surface-300 mb-3">
                     Examples to get you started:
                   </Text>
@@ -61,7 +61,7 @@ const AddIdentityGoalModal = ({ isOpen, onClose, newGoal, setNewGoal, onCreateGo
                       </Button>
                     ))}
                   </div>
-                &lt;/div&gt;
+                </div>
               </div>
               
               <div className="flex justify-end space-x-3 mt-6">
