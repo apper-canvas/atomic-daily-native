@@ -12,7 +12,7 @@ const TinyWinModal = ({ isOpen, onClose, habitName, tinyWin, setTinyWin, onSaveT
   return (
     <AnimatePresence>
       {isOpen && (
-        &lt;&gt;
+        <>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
