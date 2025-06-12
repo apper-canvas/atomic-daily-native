@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "Drink 8 glasses of water",
+    "identityGoalId": "1",
+    "frequency": "daily",
+    "reminderTime": "09:00",
+    "currentStreak": 5,
+    "longestStreak": 12,
+    "createdAt": "2024-01-15T08:15:00Z"
+  },
+  {
+    "id": "2",
+    "name": "Take a 20-minute walk",
+    "identityGoalId": "1", 
+    "frequency": "daily",
+    "reminderTime": "17:30",
+    "currentStreak": 3,
+    "longestStreak": 8,
+    "createdAt": "2024-01-15T08:20:00Z"
+  },
+  {
+    "id": "3",
+    "name": "Review tomorrow's priorities",
+    "identityGoalId": "2",
+    "frequency": "daily",
+    "reminderTime": "20:00",
+    "currentStreak": 7,
+    "longestStreak": 15,
+    "createdAt": "2024-01-20T09:45:00Z"
+  },
+  {
+    "id": "4",
+    "name": "Eat a healthy breakfast",
+    "identityGoalId": "1",
+    "frequency": "daily", 
+    "reminderTime": "08:00",
+    "currentStreak": 2,
+    "longestStreak": 6,
+    "createdAt": "2024-01-25T07:30:00Z"
+  },
+  {
+    "id": "5",
+    "name": "Practice deep work for 25 minutes",
+    "identityGoalId": "2",
+    "frequency": "daily",
+    "reminderTime": "10:00",
+    "currentStreak": 4,
+    "longestStreak": 9,
+    "createdAt": "2024-02-01T10:00:00Z"
+  },
+  {
+    "id": "6",
+    "name": "Read for 15 minutes",
+    "identityGoalId": "3",
+    "frequency": "daily",
+    "reminderTime": "21:00",
+    "currentStreak": 1,
+    "longestStreak": 4, 
+    "createdAt": "2024-02-01T19:15:00Z"
+  }
+]

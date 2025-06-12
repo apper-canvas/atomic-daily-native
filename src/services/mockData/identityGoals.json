@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "statement": "I am a healthy and energetic person",
+    "createdAt": "2024-01-15T08:00:00Z",
+    "linkedHabits": ["1", "2", "4"]
+  },
+  {
+    "id": "2", 
+    "statement": "I am a focused and productive professional",
+    "createdAt": "2024-01-20T09:30:00Z",
+    "linkedHabits": ["3", "5"]
+  },
+  {
+    "id": "3",
+    "statement": "I am a lifelong learner who grows every day",
+    "createdAt": "2024-02-01T19:00:00Z",
+    "linkedHabits": ["6"]
+  },
+  {
+    "id": "4",
+    "statement": "I am someone who nurtures meaningful relationships",
+    "createdAt": "2024-02-10T16:45:00Z",
+    "linkedHabits": []
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "habitId": "1",
+    "date": "2024-12-09",
+    "completed": true,
+    "tinyWin": "Started my day feeling hydrated and energized!"
+  },
+  {
+    "id": "2", 
+    "habitId": "1",
+    "date": "2024-12-08",
+    "completed": true,
+    "tinyWin": "Remembered to keep my water bottle nearby all day"
+  },
+  {
+    "id": "3",
+    "habitId": "2",
+    "date": "2024-12-09",
+    "completed": true,
+    "tinyWin": "Enjoyed the fresh air and cleared my mind"
+  },
+  {
+    "id": "4",
+    "habitId": "2", 
+    "date": "2024-12-08",
+    "completed": false,
+    "tinyWin": ""
+  },
+  {
+    "id": "5",
+    "habitId": "3",
+    "date": "2024-12-09",
+    "completed": true,
+    "tinyWin": "Set up my workspace for tomorrow's big presentation"
+  },
+  {
+    "id": "6",
+    "habitId": "3",
+    "date": "2024-12-08", 
+    "completed": true,
+    "tinyWin": "Organized my task list and feel more in control"
+  },
+  {
+    "id": "7",
+    "habitId": "4",
+    "date": "2024-12-09",
+    "completed": true,
+    "tinyWin": "Made a delicious smoothie with spinach and berries"
+  },
+  {
+    "id": "8",
+    "habitId": "5",
+    "date": "2024-12-09",
+    "completed": false,
+    "tinyWin": ""
+  },
+  {
+    "id": "9",
+    "habitId": "5",
+    "date": "2024-12-08",
+    "completed": true,
+    "tinyWin": "Completed my focused work session without distractions"
+  },
+  {
+    "id": "10",
+    "habitId": "6",
+    "date": "2024-12-09",
+    "completed": true,
+    "tinyWin": "Learned something new about productivity from my book"
+  }
+]
