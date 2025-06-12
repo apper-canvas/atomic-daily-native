@@ -35,13 +35,13 @@ const IdentityGoalDisplayCard = ({ goal, linkedHabits = [], onDeleteGoal, motion
           onClick={() => onDeleteGoal(goal.id)}
           className="p-2 text-surface-400 hover:text-red-500 transition-colors"
           title="Delete identity goal"
-        >
+>
           <ApperIcon name="Trash2" className="w-4 h-4" />
 </Button>
       </div>
       
       {linkedHabits.length > 0 && (
-        <div>
+        <div className="mt-4">
           <Text as="h4" className="text-sm font-medium text-surface-700 dark:text-surface-300 mb-3">
             Supporting Habits:
           </Text>
