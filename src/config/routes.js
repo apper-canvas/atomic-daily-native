@@ -1,7 +1,7 @@
-import Today from '../pages/Today.jsx';
-import Habits from '../pages/Habits.jsx';
-import Progress from '../pages/Progress.jsx';
-import Identity from '../pages/Identity.jsx';
+import HomePage from '@/components/pages/HomePage.jsx';
+import HabitsPage from '@/components/pages/HabitsPage.jsx';
+import ProgressPage from '@/components/pages/ProgressPage.jsx';
+import IdentityPage from '@/components/pages/IdentityPage.jsx';
 
 export const routes = {
   today: {
@@ -9,28 +9,28 @@ export const routes = {
     label: 'Today',
     path: '/today',
     icon: 'Calendar',
-    component: Today
+component: HomePage
   },
   habits: {
     id: 'habits',
     label: 'Habits',
     path: '/habits',
     icon: 'Target',
-    component: Habits
+component: HabitsPage
   },
   progress: {
     id: 'progress',
     label: 'Progress',
     path: '/progress',
     icon: 'TrendingUp',
-    component: Progress
+component: ProgressPage
   },
   identity: {
     id: 'identity',
     label: 'Identity',
     path: '/identity',
     icon: 'User',
-    component: Identity
+component: IdentityPage
   }
 };
 

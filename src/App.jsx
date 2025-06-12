@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import Layout from './Layout.jsx';
-import { routes, routeArray } from './config/routes.js';
-import NotFound from './pages/NotFound.jsx';
+import Layout from '@/Layout.jsx';
+import { routes, routeArray } from '@/config/routes.js';
+import NotFoundPage from '@/components/pages/NotFoundPage.jsx';
 import './index.css';
 
 function App() {

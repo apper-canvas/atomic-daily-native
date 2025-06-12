@@ -1,7 +1,7 @@
 import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import ApperIcon from './components/ApperIcon.jsx';
+import ApperIcon from '@/components/ApperIcon.jsx';
 import { routeArray } from './config/routes.js';
 
 const Layout = () => {
