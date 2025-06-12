@@ -19,7 +19,7 @@ function App() {
                 element={<route.component />}
               />
             ))}
-            <Route path="*" element={<NotFound />} />
+<Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
         
