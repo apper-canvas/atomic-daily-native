@@ -37,28 +37,28 @@ const IdentityGoalDisplayCard = ({ goal, linkedHabits = [], onDeleteGoal, motion
           title="Delete identity goal"
         >
           <ApperIcon name="Trash2" className="w-4 h-4" />
-        </Button>
+</Button>
       </div>
       
       {linkedHabits.length > 0 && (
-        &lt;div&gt;
+        <div>
           <Text as="h4" className="text-sm font-medium text-surface-700 dark:text-surface-300 mb-3">
             Supporting Habits:
           </Text>
-          &lt;div className="space-y-2"&gt;
+          <div className="space-y-2">
             {linkedHabits.map(habit => (
-              &lt;LinkedHabitItem key={habit.id} habit={habit} /&gt;
+              <LinkedHabitItem key={habit.id} habit={habit} />
             ))}
-          &lt;/div&gt;
-        &lt;/div&gt;
+          </div>
+        </div>
       )}
       
       {linkedHabits.length === 0 && (
-        &lt;div className="text-center py-4 text-surface-500 dark:text-surface-400"&gt;
+        <div className="text-center py-4 text-surface-500 dark:text-surface-400">
           <Text as="p" className="text-sm">
             No habits linked yet. Create habits that support this identity.
           </Text>
-        &lt;/div&gt;
+        </div>
       )}
     </Card>
   );
