@@ -9,10 +9,10 @@ import FormField from '@/components/molecules/FormField';
 const AddHabitModal = ({ isOpen, onClose, newHabit, setNewHabit, onCreateHabit, identityGoals }) => {
   if (!isOpen) return null;
 
-  return (
+return (
     <AnimatePresence>
       {isOpen && (
-        &lt;&gt;
+        <>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -47,11 +47,11 @@ const AddHabitModal = ({ isOpen, onClose, newHabit, setNewHabit, onCreateHabit, 
                     value={newHabit.identityGoalId}
                     onChange={(e) => setNewHabit({...newHabit, identityGoalId: e.target.value})}
                   >
-                    &lt;option value=""&gt;Select an identity goal&lt;/option&gt;
+                    <option value="">Select an identity goal</option>
                     {identityGoals.map(goal => (
-                      &lt;option key={goal.id} value={goal.id}&gt;
+                      <option key={goal.id} value={goal.id}>
                         {goal.statement}
-                      &lt;/option&gt;
+                      </option>
                     ))}
                   </Input>
                 </FormField>
