@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 const HeatmapCell = ({ intensity, title, className = '', index }) => {
   let bgColorClass = 'bg-surface-200 dark:bg-surface-700'; // Default for 0 intensity
   if (intensity > 0) {
-    if (intensity &lt; 0.5) {
+    if (intensity < 0.5) {
       bgColorClass = 'bg-secondary/30';
-    } else if (intensity &lt; 0.8) {
+    } else if (intensity < 0.8) {
       bgColorClass = 'bg-secondary/60';
     } else {
       bgColorClass = 'bg-secondary';
